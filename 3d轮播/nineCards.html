@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>3d轮播</title>
+  <style>
+  .wrap {
+    width: 800px;
+    height: 150px;
+    margin: 50px auto 0;
+    border: 1px solid;
+    position: relative;
+    perspective: 500px;
+  }
+  @keyframes animationgg{
+    from{
+      transform: translateZ(-290px) rotateY(0deg);
+    }
+    to{
+      transform: translateZ(-290px) rotateY(360deg);
+    }
+  }
+  .carousel {
+    transform: translateZ(-290px);
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: animationgg 10s linear 2;
+  }
+  .carousel .item {
+    width: 200px;
+    height: 100px;
+    background-color: #ccc;
+    border: 1px dotted #56d;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -50px;
+    text-align: center;
+    font-size: 70px;
+    backface-visibility: hidden;
+  }
+  .carousel .item:nth-child(1) {
+    transform: rotateY(0deg) translateZ(290px);
+    background-color: rgb(255, 0, 0);
+  }
+  .carousel .item:nth-child(2) {
+    transform: rotateY(40deg) translateZ(290px);
+    background-color: rgb(255, 100, 0);
+  }
+  .carousel .item:nth-child(3) {
+    transform: rotateY(80deg) translateZ(290px);
+    background-color: rgb(255, 200, 0);
+  }
+  .carousel .item:nth-child(4) {
+    transform: rotateY(120deg) translateZ(290px);
+    background-color: rgb(255, 0, 100);
+  }
+  .carousel .item:nth-child(5) {
+    transform: rotateY(160deg) translateZ(290px);
+    background-color: rgb(0, 255, 0);
+  }
+  .carousel .item:nth-child(6) {
+    transform: rotateY(200deg) translateZ(290px);
+    background-color: rgb(0, 255, 200);
+  }
+  .carousel .item:nth-child(7) {
+    transform: rotateY(240deg) translateZ(290px);
+    background-color: rgb(0, 0, 255);
+  }
+  .carousel .item:nth-child(8) {
+    transform: rotateY(280deg) translateZ(290px);
+    background-color: rgb(100, 0, 255);
+  }
+  .carousel .item:nth-child(9) {
+    transform: rotateY(320deg) translateZ(290px);
+    background-color: rgb(200, 150, 200);
+  }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="carousel">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </div>
+</body>
+</html>
