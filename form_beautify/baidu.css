@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+ul, li {
+  list-style: none;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  border: 1px solid red;
+  justify-content: center;
+  align-items: center;
+}
+.suggestion {
+  display: none;
+}
+.floatDiv {
+  position: absolute;
+  border: 1px solid red;
+  top: 0;
+  right: 0;
+}
+.floatWrap {
+  position: relative;
+  display: inline-block;
+}
+.floatWrap {
+  float: left;
+}
+.floatWrap + button {
+  float: left;
+}
+.floatWrap input[type='text'] {
+  border: 1px solid #b8b8b8;
+  width: 540px;
+  height: 35px;
+  padding-left: 8px;
+  font-size: 15px;
+}
+.floatWrap input[type='text']:focus {
+  outline: none;
+  border: 1px solid #4b94fc;
+}

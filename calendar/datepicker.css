@@ -1,0 +1,48 @@
+.ui-datepicker {
+  width: 240px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: serif;
+}
+.ui-datepicker .header {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #ca2b2b;
+  color: #fff;
+}
+.ui-datepicker .header .fa {
+  float: left;
+  display: block;
+  margin-top: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.ui-datepicker .header .fa-chevron-right {
+  float: right;
+  margin-right: 5px;
+}
+.ui-datepicker .panel {
+  width: 100%;
+  text-align: center;
+}
+.ui-datepicker .panel th {
+  line-height: 2;
+}
+.ui-datepicker .panel td {
+  line-height: 2;
+}
+.ui-datepicker .panel .pre-month,
+.ui-datepicker .panel .next-month {
+  color: #ccc;
+}
+.ui-datepicker .panel .cur-month {
+  cursor: pointer;
+}
+.ui-datepicker .panel .cur-month:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+.ui-datepicker .panel .cur-date {
+  color: #ca2b2b;
+}
