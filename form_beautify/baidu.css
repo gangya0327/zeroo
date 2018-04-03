@@ -18,14 +18,22 @@ body {
   justify-content: center;
   align-items: center;
 }
+.wrap {
+  position: relative;
+}
 .suggestion {
   display: none;
+  position: absolute;
+  top: 35px;
+}
+.suggestion.active{
+  display: block;
 }
 .floatDiv {
   position: absolute;
-  border: 1px solid red;
   top: 0;
   right: 0;
+  line-height: 35px;
 }
 .floatWrap {
   position: relative;
@@ -34,8 +42,42 @@ body {
 .floatWrap {
   float: left;
 }
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.floatDiv svg.icon {
+  font-size: 20px;
+  fill: #b8b8b8;
+  margin-right: 10px;
+}
+.floatDiv svg.icon:hover {
+  fill: #4b94fc;
+  cursor: pointer;
+}
+.floatDiv .split {
+  border-left: 1px solid #b8b8b8;
+  margin-right: 10px;
+  height: 16px;
+  display: inline-block;
+}
 .floatWrap + button {
   float: left;
+  background: #3988FB;
+  color: #fff;
+  padding: 0 20px;
+  font-size: 14px;
+  border: none;
+  line-height: 35px;
+}
+.floatWrap + button:focus{
+  outline: none;
+}
+.floatWrap + button:hover{
+  box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+  background: #3781F0;
 }
 .floatWrap input[type='text'] {
   border: 1px solid #b8b8b8;

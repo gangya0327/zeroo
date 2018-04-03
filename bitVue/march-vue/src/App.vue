@@ -84,6 +84,7 @@
       <button @click='change4'>改变第2个值，为5</button>
     </div>
     <mylist></mylist>
+    <clac></clac>
     <!-- <router-view/> -->
   </div>
 </template>
@@ -93,6 +94,7 @@ import Vue from 'vue'
 import mybtn from './components/btn.vue'
 import mylist from './components/mylist.vue'
 import myarticle from './components/article.vue'
+import clac from './components/clac.vue'
 export default {
   name: 'App',
   data () {
@@ -149,7 +151,8 @@ export default {
   components: {
     mybtn,
     mylist,
-    myarticle
+    myarticle,
+    clac
   },
   methods: {
     buttonClick(){

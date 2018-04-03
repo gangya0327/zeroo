@@ -4,24 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://at.alicdn.com/t/font_613360_049i8wlqqhqwipb9.js"></script>
   <link rel="stylesheet" href="./baidu.css">
-  <title>hecidusiro</title>
+  <title>baidu</title>
 </head>
 <body>
   <div class="wrap">
     <div class="floatWrap">
       <span class="floatDiv">
-        <button>x</button><span class="split"></span><button>y</button>
+        <svg class="icon" aria-hidden='true'>
+          <use xlink:href='#icon-audio'></use>
+        </svg><span class="split"></span><svg class="icon" aria-hidden='true'>
+          <use xlink:href='#icon-photo'></use>
+        </svg>        
       </span>
-      <input type="text">
+      <input type="text" id="keyword" autocomplete="off">
     </div>    
     <button>百度一下</button>
-    <ul class="suggestion">
+    <ul class="suggestion" id='suggestion'>
       <li>选项1</li>
       <li>选项2</li>
       <li>选项3</li>
       <li>选项4</li>
     </ul>
   </div>
+  <script src="./baidu.js"></script>    
+
+  <!-- <script src="./font_613360/iconfont.js"></script>   -->
 </body>
 </html>
