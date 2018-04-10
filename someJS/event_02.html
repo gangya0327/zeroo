@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    div {
+      border: 1px solid;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <p onclick="alert('hello p')">hello p</p>
+
+  <p id='hip'>hi p</p>
+  <script>
+    var hip = document.getElementById('hip')
+    hip.onclick = function () {
+      alert('hi p')
+    }
+  </script>
+
+  <p id='heyp'>hey p</p>
+  <script>
+    var heyp = document.getElementById('heyp')
+    var handle = function () {
+      alert('hey p')
+    }
+    heyp.addEventListener('click', handle, false)
+    //heyp.removeEventListener('click', handle, false)
+  </script>
+
+  <div>
+    hello div
+    <div id='hid'>hi div</div>
+  </div>
+  <script>
+    var hid = document.querySelectorAll('div')
+    hid.forEach(function (element) {
+      element.onclick = function (evt) {
+        console.log(this.innerText)
+        evt.stopPropagation();
+      }
+    })
+  </script>
+
+  <a href="https://www.baidu.com" target='blank' id='baidu'>baidu</a>
+  <script>
+    var baidu = document.getElementById('baidu')
+    baidu.onclick = function (evt) {
+      evt.preventDefault();
+      console.log('baidu.com')
+    }
+  </script>
+</body>
+
+</html>
