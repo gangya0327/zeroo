@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <p onclick='clickP1()'>click P1</p>
+    <p id='p2'>click P2</p>
+    <p id='p3'>click P3</p>
+  </div>
+</body>
+
+<script>
+function clickP1(){
+  console.log('p11');
+}
+var p2 = document.getElementById('p2')
+p2.onclick = function(){
+  console.log('p22')
+}
+var p3 = document.getElementById('p3')
+p3.addEventListener('click', function(){
+  console.log('p33')
+})
+
+</script>
+</html>

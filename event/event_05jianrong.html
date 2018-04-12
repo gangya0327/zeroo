@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>click me</div>
+
+  <script>
+    function getEvent(e) {
+      return e || window.event;
+    }
+
+    function getTarget(e) {
+      return e.target || window.srcElement;
+    }
+
+    function preventDefault(e) {
+      if (e.preventDefault) {
+        e.preventDefault();
+      }
+      else {
+        e.returnValue = false;
+      }
+    }
+
+    function stopPropagation(e) {
+      if (e.stopPropagation) {
+        e.stopPropagation();
+      }
+      else {
+        e.cancelBubble = true;
+      }
+    }
+
+    function addEvent(node, type, handler) {
+      if (!node) return false
+      if (node.addEventListener) {
+        node.addEventListener(type, handler, false);
+        return false;
+      }
+      else if (node.attachEvent) {
+        node.attachEvent('on' + type, handler);
+        return false;
+      }
+      return false;
+    }
+  </script>
+</body>
+
+</html>

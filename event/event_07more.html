@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      border: 2px solid;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id='dblclick'>dblclick</button>
+
+  <div id='mouseover'>
+      mouseover
+    <div>inner</div>
+  </div>
+
+  <div id='mouseenter'>
+      mouseenter
+    <div>inner</div>
+  </div>
+
+  <input type="text" id='focus'>
+
+  <form action="/upload" id='form'>
+    <input type="text" name="username" id="username">
+    <p id='msg'></p>
+    <input id='submit' type="submit" value='确定'>
+  </form>
+
+
+  <script>
+    var dblclick = document.querySelector('#dblclick')
+    dblclick.addEventListener('dblclick', function () {
+      console.log('yes dblclick')
+    })
+
+    var mouseover = document.querySelector('#mouseover')
+    mouseover.addEventListener('mouseover', function () {
+      console.log('yes mouseover')
+    })
+    mouseover.addEventListener('mouseout', function () {
+      console.log('yes mouseout')
+    })
+
+    var mouseenter = document.querySelector('#mouseenter')
+    mouseenter.addEventListener('mouseenter', function () {
+      console.log('yes mouseenter')
+    })
+    mouseenter.addEventListener('mouseleave', function () {
+      console.log('yes mouseleave')
+    })
+
+    var focus = document.querySelector('#focus')
+    focus.addEventListener('focus', function () {
+      console.log('yes focus')
+    })
+    focus.addEventListener('blur', function () {
+      console.log('yes blur')
+    })
+    focus.addEventListener('keyup', function (e) {
+      console.log(e)
+      console.log('yes keyup')
+    })
+    focus.addEventListener('change', function (e) {
+      console.log('yes change')
+    })
+
+    var form = document.querySelector('#form')
+    var username = document.querySelector('#username')
+    var msg = document.querySelector('#msg')
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();      
+      if(/^\w{6,12}$/.test(username.value)){
+        form.submit();
+      }
+      else{
+        msg.innerHTML = 'ERROR'
+      }
+    })
+
+    window.addEventListener('scroll', function(){
+      console.log('scroll')
+    })
+  </script>
+</body>
+
+</html>
