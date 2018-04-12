@@ -1,0 +1,16 @@
+<!--pages/list/list.wxml-->
+<view class='container'>
+  <template name='lists'>
+      <view class='li-left'>
+        <image src='{{img}}' background-size='cover' background-position='center'></image>
+      </view>
+      <view class='li-right'>
+        <view class='li-title'>{{title}}</view>
+        <view class='li-time'>{{time}}</view>
+      </view>
+  </template>
+
+  <view class='li' wx:for="{{listArray}}" wx:key="*this" wx:for-item='news' bindtap='goDetail'>
+    <template is='lists' data='{{...news}}' />
+  </view>
+</view>

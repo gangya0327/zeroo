@@ -1,0 +1,28 @@
+/* pages/list/list.wxss */
+.container {
+  padding: 10rpx 40rpx;
+}
+.container .li {
+  display: flex;
+  padding: 10rpx 30rpx;
+  width: 100%;
+  justify-content: space-between;
+}
+.container .li .li-left image {
+  width: 300rpx;
+  height: 170rpx;
+  margin-right: 40rpx;
+}
+.container .li .li-right {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .li .li-right .li-title {
+  font-size: 32rpx;
+}
+.container .li .li-right .li-time {
+  color: #aaa;
+  font-size: 30rpx;
+}

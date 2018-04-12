@@ -1,0 +1,11 @@
+<!--aboutme.wxml-->
+<view class="container">
+  <view class='logo'>
+    <image class='logo-jpg' src='{{img}}' background-size='cover'></image>
+    <view class='logo-title'>{{title}}</view>
+  </view>
+  <view class='des paragraph'>{{description}}</view>
+  <view class='bkg paragraph'>{{background}}</view>
+  <view class='sto paragraph'>{{story}}</view>
+  <view class='time paragraph'>{{time}}</view>
+</view>

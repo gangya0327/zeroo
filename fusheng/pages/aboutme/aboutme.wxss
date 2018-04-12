@@ -1,0 +1,24 @@
+/* pages/aboutme/aboutme.wxss */
+.container {
+  padding: 80rpx 50rpx;
+}
+.container .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70rpx;
+}
+.container .logo .logo-jpg {
+  width: 128px;
+  height: 128px;
+  margin-bottom: 50rpx;
+}
+.container .logo .logo-title {
+  font-size: 50rpx;
+}
+.container .paragraph {
+  font-size: 32rpx;
+  align-self: flex-start;
+  text-indent: 2em;
+  margin-bottom: 20rpx; 
+}
