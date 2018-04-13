@@ -1,16 +1,17 @@
 {
-  "pages":[
+  "pages": [
     "pages/list/list",
     "pages/detail/detail",
+    "pages/message/message",
     "pages/aboutme/aboutme",
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "阴阳",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
@@ -27,7 +28,7 @@
         "selectedIconPath": "image/icon/aboutl.png"
       }
     ],
-    "colore": "#515151",
+    "color": "#777",
     "selectedColor": "#e6e6e6",
     "backgroundColor": "#000"
   }

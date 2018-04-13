@@ -1,2 +1,13 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class='container'>
+  <view class='title'>{{info.title}}</view>
+  <view class='time'>{{info.time}}</view>
+  <view class='image'>
+    <image class='img' src='{{info.img}}' mode='aspectFill'></image>
+  </view>
+  <view class='content'>
+    <text>{{info.content1}}</text>
+    <text>{{info.content2}}</text>
+    <text>{{info.content3}}</text>
+  </view>
+</view>

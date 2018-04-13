@@ -1,1 +1,40 @@
 /* pages/detail/detail.wxss */
+@import '../../wxParse/wxParse.wxss';
+
+.container {
+  padding: 30rpx 40rpx 100rpx;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.container .title {
+  text-align: center;
+  padding: 0 40rpx;
+  font-weight: 700;
+  font-size: 42rpx;
+}
+
+.container .time {
+  padding: 30rpx 0;
+  font-size: 32rpx;
+  color: #aaa;
+  align-self: flex-end;
+}
+
+.container .image {
+  width: 100%;
+  padding-bottom: 40rpx;
+}
+
+.container .image .img {
+  width: 100%;
+  height: 400rpx;
+}
+
+.container .content text {
+  text-indent: 2em;
+  display: inline-block;
+  font-size: 36rpx;
+  padding: 6rpx 0;
+}
