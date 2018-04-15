@@ -1,7 +1,45 @@
 <!--pages/message/message.wxml-->
-<form name='pushMsgFm' report-submit bindsubmit='orderSign'>  
-    enter product:<input type="text" name="product" value='' placeholder="enter your name" />  
-    detail: <input type="text" name='detail' placeholder="enter desc" />  
-    select sex:<switch type="switch" name='sex' />  
-    <button form-type="submit">submit</button>  
-</form>  
+<view>用户：{{name}}</view>
+<view>密码：{{pass}}</view>
+<button bindtap='backIndex'>确定</button>
+<navigator hover-class='active' url='../new/new'>跳转首页</navigator>
+<button bindtap='sayHello'>sayHello</button>
+
+<view id="{{id}}">内容</view>
+<view wx:if='{{ifbool}}'>内容渲染</view>
+<button bindtap='showIfbool'>显示内容渲染</button>
+
+<view wx:if="{{id==1}}">一条</view>
+<view wx:elif="{{id>1}}">很多条</view>
+<view wx:else="{{id>5}}">超多条</view>
+
+<view>{{ifbool?"正数":"倒数"}}</view>
+<view>{{id+1}}+1</view>
+
+<text wx:key="this" wx:for="{{arr}}">{{item}}--</text>
+<template name="obj">
+  <view>{{a}}</view>
+  <view>{{b}}</view>
+  <view>{{name}}</view>
+  <view>{{pass}}</view>
+</template>
+<template is="obj" data="{{...myobj,name,pass}}"></template>
+
+<view wx:for="{{arr}}" wx:key="this" wx:for-index="ii" wx:for-item="tt">
+  数列{{ii}}:值{{tt}}
+</view>
+
+<view wx:for="{{arr}}" wx:key="this" wx:for-item="i">
+  <text wx:for="{{arr}}" wx:key="this" wx:for-item="j" wx:if="{{i >= j}}">{{i}}*{{j}}={{i*j}} </text>
+</view>
+
+<view bindtap='outer' style='border: 1px solid red'>outerTap
+  <view style='border: 1px solid' catchtap="inner">inner</view>
+</view>
+
+<!-- <import src="item.wxml" />
+<template is="item" data="{{name: 'peter'}}" /> -->
+
+<include src="item.wxml" />
+<template is="item" data="{{name: 'peter'}}" />
+

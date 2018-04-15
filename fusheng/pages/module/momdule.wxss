@@ -1,0 +1,39 @@
+/* pages/module/momdule.wxss */
+
+.wrap {
+  width: 600rpx;
+  height: 500rpx;
+  border: 1px solid;
+}
+
+.wrap .view-a {
+  width: 700rpx;
+  height: 300rpx;
+  background: red;
+}
+
+.wrap .view-b {
+  width: 700rpx;
+  height: 300rpx;
+  background: green;
+}
+
+.wrap .view-c {
+  width: 700rpx;
+  height: 300rpx;
+  background: blue;
+}
+
+.wrap .view-d {
+  width: 700rpx;
+  height: 300rpx;
+  background: pink;
+}
+
+.swiperImg {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 0 auto;
+  display: block;
+  border: 3px solid;
+}

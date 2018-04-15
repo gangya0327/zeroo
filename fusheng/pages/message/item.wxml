@@ -1,0 +1,4 @@
+<view>这是item内容</view>
+<template name="item">
+  <view>这里是导入的内容：{{name}}</view>
+</template>

@@ -1,11 +1,13 @@
 {
   "pages": [
-    "pages/list/list",
-    "pages/detail/detail",
+    "pages/module/momdule",
     "pages/message/message",
+    "pages/list/list",
     "pages/aboutme/aboutme",
+    "pages/detail/detail",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/new/new"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,6 +26,11 @@
       {
         "pagePath": "pages/aboutme/aboutme",
         "text": "关于",
+        "iconPath": "image/icon/about.png",
+        "selectedIconPath": "image/icon/aboutl.png"
+      },{
+        "pagePath": "pages/module/momdule",
+        "text": "信息",
         "iconPath": "image/icon/about.png",
         "selectedIconPath": "image/icon/aboutl.png"
       }

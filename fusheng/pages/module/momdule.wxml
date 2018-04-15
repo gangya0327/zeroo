@@ -1,0 +1,24 @@
+<scroll-view class='wrap' scroll-y="true" scroll-x="true" bindscrolltoupper="scrolltoupper" bindscrolltolower="scrolltolower" scroll-into-view="{{toView}}" scroll-left="50" bindscroll="scroll">
+  <view id="a" class='view-a'>a</view>
+  <view id="b" class='view-b'>b</view>
+  <view id="c" class='view-c'>c</view>
+  <view id="d" class='view-d'>d</view>
+</scroll-view>
+<button bindtap='tapChange'>切换</button>
+
+<swiper indicator-dots="true" autoplay="{{autoplay}}" interval="{{inter}}" duration="2000" current="2" bindchange='swiperChange'>
+  <swiper-item wx:for="{{imgUrl}}" wx:key="this">
+    <image src='{{item}}' class='swiperImg' />
+  </swiper-item>
+</swiper>
+<slider min="2000" max='5000' show-value='true' bindchange='sliderChange'></slider>
+<button bindtap='autoPlay'>切换autoplay</button>
+
+<icon type='success' size='20' color="blue"></icon>
+<view>
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size='30'></icon>
+  </block>
+</view>
+
+<progress percent='{{progress}}' show-info stroke-width='10' color='blue' active></progress>
