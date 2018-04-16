@@ -1,0 +1,46 @@
+<button type="primary" disabled="{{disabledBool}}">按钮</button>
+<button bindtap='invokeBtn' plain="true" size="mini" type="warn">启用按钮</button>
+<button loading>运行中</button>
+<button hover-class="hover-btn">按钮点击样式</button>
+
+<form bindsubmit='submitEvent' bindreset='resetEvent'>
+  <input type="text" name="username" placeholder="输入账号" placeholder-style='color: red' maxlength='5' auto-focus="true" bindinput='inputEvent' bindfocus='focusEvent' bindblur='blurEvent'></input>
+  <input type="number" password placeholder="输入密码" disabled></input>
+  <checkbox-group bindchange="checkedchange">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" wx:for="{{country}}" wx:key="this">{{item.value}}</checkbox>
+  </checkbox-group>
+
+  <picker value="{{citysIndex}}" range="{{citys}}" bindchange='pickerEvent'>
+    <view>选择城市：{{citys[citysIndex]}}</view>
+  </picker>
+  <picker start="08:03" end="14:10" value="{{time}}" mode="time" bindchange='timePicker'>
+    <view>选择时间：{{time}}</view>
+  </picker>
+  <picker start="2014-12-31" end="2020-1-1" value="{{date}}" mode="date" bindchange='datePicker' fields="day">
+    <view>选择时间：{{date}}</view>
+  </picker>
+
+  <radio-group>
+    <label wx:for="{{country}}" wx:key="this">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}">{{item.value}}</checkbox>
+    </label>
+  </radio-group>
+  <radio-group bindchange="radiochange">
+    <radio value="am" color="blue">america</radio>
+    <radio value="ch" disabled>china</radio>
+    <radio value="ba" checked>barriz</radio>
+  </radio-group>
+
+  <slider show-value='true' value='40' backgroundColor='blue' max="50" min="30" step='2' bindchange='sliderchange'></slider>
+  <view>
+    <switch>选中</switch>
+    <switch checked type='checkbox' bindchange='switchchange'>选择</switch>
+  </view>
+
+  <view class='textarea'>
+    <textarea class="textarea" placeholder='多行文本' auto-height='true' maxlength='70' bindlinechange='linechange'></textarea>
+  </view>
+
+  <button form-type="submit" size='mini'>提交</button>
+  <button form-type='reset' size='mini'>重置</button>
+</form>

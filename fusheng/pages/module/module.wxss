@@ -1,35 +1,37 @@
 /* pages/module/momdule.wxss */
 
 .wrap {
-  width: 600rpx;
-  height: 500rpx;
+  width: 650rpx;
+  height: 400rpx;
   border: 1px solid;
 }
 
 .wrap .view-a {
-  width: 700rpx;
+  width: 750rpx;
   height: 300rpx;
   background: red;
 }
 
 .wrap .view-b {
-  width: 700rpx;
+  width: 750rpx;
   height: 300rpx;
   background: green;
 }
 
 .wrap .view-c {
-  width: 700rpx;
+  width: 750rpx;
   height: 300rpx;
   background: blue;
 }
 
 .wrap .view-d {
-  width: 700rpx;
+  width: 750rpx;
   height: 300rpx;
   background: pink;
 }
-
+swiper {
+  height: 250rpx;
+}
 .swiperImg {
   width: 180rpx;
   height: 180rpx;

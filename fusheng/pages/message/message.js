@@ -32,7 +32,7 @@ Page({
   },
   backIndex: function () {
     wx.navigateTo({
-      url: '../new/new',
+      url: '../msg/msg',
       success: function () {
         console.log("success navigate")
       }

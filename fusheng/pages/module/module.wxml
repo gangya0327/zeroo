@@ -14,9 +14,8 @@
 <slider min="2000" max='5000' show-value='true' bindchange='sliderChange'></slider>
 <button bindtap='autoPlay'>切换autoplay</button>
 
-<icon type='success' size='20' color="blue"></icon>
 <view>
-  <block wx:for="{{iconType}}">
+  <block wx:for="{{iconType}}" wx:key="this">
     <icon type="{{item}}" size='30'></icon>
   </block>
 </view>

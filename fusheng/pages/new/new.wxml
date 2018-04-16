@@ -1,3 +1,0 @@
-<!--pages/new/new.wxml-->
-<text>pages/new/new.wxml</text>
-<button bindtap='backMessage'>返回</button>

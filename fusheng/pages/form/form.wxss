@@ -1,0 +1,16 @@
+/* pages/form/form.wxss */
+
+.hover-btn {
+  opacity: 0.2;
+  color: red;
+}
+
+form {
+  margin: 20rpx 40rpx;
+  display: block;
+}
+
+form input {
+  border: 1px solid;
+  margin-bottom: 10rpx;
+}

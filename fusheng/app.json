@@ -1,18 +1,22 @@
 {
   "pages": [
-    "pages/module/momdule",
+    "pages/router/router",
+    "pages/operate/operate",
+    "pages/index/index",       
+    "pages/module/module", 
     "pages/message/message",
-    "pages/list/list",
+    "pages/msg/msg",
+    "pages/form/form",
+
+    "pages/list/list",      
     "pages/aboutme/aboutme",
-    "pages/detail/detail",
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/new/new"
+    "pages/detail/detail", 
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "阴阳",
+    "navigationBarTitleText": "阴阳师",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -28,11 +32,12 @@
         "text": "关于",
         "iconPath": "image/icon/about.png",
         "selectedIconPath": "image/icon/aboutl.png"
-      },{
-        "pagePath": "pages/module/momdule",
-        "text": "信息",
-        "iconPath": "image/icon/about.png",
-        "selectedIconPath": "image/icon/aboutl.png"
+      },
+      {
+        "pagePath": "pages/router/router",
+        "text": "路标",
+        "iconPath": "image/icon/router.png",
+        "selectedIconPath": "image/icon/routerl.png"
       }
     ],
     "color": "#777",
