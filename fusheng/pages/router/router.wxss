@@ -1,1 +1,4 @@
 /* pages/router/router.wxss */
+button {
+  margin: 30rpx 40rpx;
+}

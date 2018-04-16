@@ -1,66 +1,50 @@
-// pages/operate/operate.js
+var api = "https://api.douban.com/v2/book/1220562";//用于返回豆瓣接口
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  showToast: function () {
+    wx.showToast({
+      title: '删除成功',
+      icon: "loading",
+      duration: 3000,
+      success: function () {
+        console.log("显示消息框")
+      }
+    });
+    wx.request({
+      url: api,
+      data: {},
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+        wx.hideToast()
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  showAction: function () {
+    wx.showActionSheet({
+      itemList: ['A', 'B', 'C'],
+      itemColor: 'blue',
+      success: function (res) {
+        if (!res.cancel) {
+          console.log(res.tapIndex)
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  showModal: function () {
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      cancelText: "点我",
+      confirmText: "好的",
+      showCancel: false,
+      success: function (res) {
+        console.log(res)
+      }
+    })
   }
 })
