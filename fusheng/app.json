@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/operate/operate",
     "pages/router/router",
+    "pages/canvas/canvas",
+    "pages/media/media",
+    "pages/operate/operate",
     "pages/index/index",       
     "pages/module/module", 
     "pages/message/message",

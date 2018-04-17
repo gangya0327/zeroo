@@ -18,5 +18,15 @@ Page({
     wx.navigateTo({
       url: "../operate/operate"
     })
+  },
+  tomedia: function () {
+    wx.navigateTo({
+      url: "../media/media"
+    })
+  },
+  tocanvas: function () {
+    wx.navigateTo({
+      url: "../canvas/canvas"
+    })
   }
 })
