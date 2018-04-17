@@ -1,2 +1,5 @@
 <!--pages/operate/operate.wxml-->
-<text>pages/operate/operate.wxml</text>
+<navigator url='http://www.baidu.com'>前往百度</navigator>
+<navigator url='../index/index'>前往消息页（有返回）</navigator>
+<navigator open-type='redirect' url='../msg/msg?id=22553&user=peter'>前往消息页（无返回）</navigator>
+<button bindtap='goMsg'>前往消息页</button>
