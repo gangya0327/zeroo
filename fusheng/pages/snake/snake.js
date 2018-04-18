@@ -19,8 +19,8 @@ var snakeDirection = "right"
 var snakeBodys = []
 var foods = []
 var windowWidth = 0
-var windowHeight = 0;
-
+var windowHeight = 0
+var collideBool = true
 
 Page({
   data: {
@@ -37,23 +37,21 @@ Page({
       context.fill()
     }
     //碰撞函数
-    function collide(obj1, obj2) {
-      var l1 = obj1.x
-      var r1 = l1 + obj1.width
-      var t1 = obj1.y
-      var d1 = t1 + obj1.height
+    function collide(snake, food) {
+      var snakeLeft = snake.x
+      var snakeRight = snakeLeft + snake.width
+      var snakeTop = snake.y
+      var snakeBottom = snakeTop + snake.height
 
-      var l2 = obj2.x
-      var r2 = l2 + obj2.width
-      var t2 = obj2.y
-      var d2 = t2 + obj2.height
-
-      if (r1 > l2 && l1 < r2 && d1 > t2 && t1 < d2) {
+      var foodLeft = food.x
+      var foodRight = foodLeft + food.width
+      var foodTop = food.y
+      var foodBottom = foodTop + food.height
+      if (snakeLeft < foodRight && snakeRight > foodLeft && snakeBottom > foodTop && snakeTop < foodBottom) {
         return true
       } else {
         return false
       }
-
     }
 
     function animate() {
@@ -68,7 +66,11 @@ Page({
           color: "blue"
         })
         if (snakeBodys.length > 5) {
-          snakeBodys.shift()
+          if (collideBool) {
+            snakeBodys.shift()
+          } else {
+            collideBool = true
+          }
         }
 
         switch (snakeDirection) {
@@ -100,6 +102,10 @@ Page({
       for (var i = 0; i < foods.length; i++) {
         var foodObj = foods[i]
         draw(foodObj)
+        if (collide(snakeHead, foodObj)) {
+          collideBool = false
+          foodObj.reset()
+        }
       }
 
       wx.drawCanvas({
@@ -111,15 +117,20 @@ Page({
     }
 
     function rand(min, max) {
-      return parseInt(Math.random() * (max - min))
+      return parseInt(Math.random() * (max - min)) + min
     }
     function Food() {
       this.x = rand(0, windowWidth)
       this.y = rand(0, windowHeight)
-      var w = rand(10, 20)
+      var w = rand(10, 15)
       this.width = w
       this.height = w
       this.color = "rgb(" + rand(0, 255) + "," + rand(0, 255) + "," + rand(0, 255) + ")"
+      this.reset = function () {
+        this.x = rand(0, windowWidth)
+        this.y = rand(0, windowHeight)
+        this.color = "rgb(" + rand(0, 255) + "," + rand(0, 255) + "," + rand(0, 255) + ")"
+      }
 
     }
     wx.getSystemInfo({

@@ -1,6 +1,11 @@
 {
   "pages": [
+    "pages/movie/movie",
+    "pages/movieInfo/movieInfo",
+    "pages/movieSearch/movieSearch",
+    
     "pages/snake/snake",
+    "pages/animate/animate",
     "pages/router/router",
     "pages/canvas/canvas",
     "pages/media/media",
@@ -43,10 +48,16 @@
         "selectedIconPath": "image/icon/routerl.png"
       },
       {
-        "pagePath": "pages/snake/snake",
-        "text": "贪吃蛇",
-        "iconPath": "image/icon/snake.png",
-        "selectedIconPath": "image/icon/snakel.png"
+        "pagePath": "pages/movie/movie",
+        "text": "豆瓣电影",
+        "iconPath": "image/icon/movie.png",
+        "selectedIconPath": "image/icon/moviel.png"
+      },
+      {
+        "pagePath": "pages/movieSearch/movieSearch",
+        "text": "搜索",
+        "iconPath": "image/icon/search.png",
+        "selectedIconPath": "image/icon/searchl.png"
       }
     ],
     "color": "#777",

@@ -1,5 +1,5 @@
 Page({
-  tomessage: function(){
+  tomessage: function () {
     wx.navigateTo({
       url: "../message/message"
     })
@@ -27,6 +27,11 @@ Page({
   tocanvas: function () {
     wx.navigateTo({
       url: "../canvas/canvas"
+    })
+  },
+  tosnake: function () {
+    wx.navigateTo({
+      url: "../snake/snake"
     })
   }
 })
