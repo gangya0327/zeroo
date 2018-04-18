@@ -3,3 +3,5 @@
 <button bindtap='tomodule' type='warn'>前往module模块页面</button>
 <button bindtap='toform'>前往form表单页面</button>
 <button bindtap='tooperate' type="primary">前往operate操作页面</button>
+<button bindtap='tomedia'>前往media操作页面</button>
+<button bindtap='tocanvas'>前往canvas操作页面</button>
