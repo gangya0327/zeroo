@@ -1,0 +1,1 @@
+<canvas canvasId="snake" class="snake" bindtouchstart="touchStart" bindtouchend="touchEnd" bindtouchmove="touchMove"></canvas>

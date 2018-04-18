@@ -1,66 +1,42 @@
-// pages/canvas/canvas.js
+var rectX = 0
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+  touchMove: function(e){
+    console.log(e)
+  },
+  touchStart: function(e){
+    console.log(e)
+  },
+  touchEnd: function(e){
+    console.log(e)
+  },
   onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+    var context = wx.createContext("canvasTest")
+    var frameNum = 0  //帧数
+    function drawRect() {
+      context.setStrokeStyle("#fff")
+      context.rect(rectX, 50, 100, 100)
+      context.stroke()
+      context.fill()
+      wx.drawCanvas({
+        canvasId: "canvasTest",
+        actions: context.getActions()
+      })
+    }
+    function animation() {
+      frameNum++
+      if (frameNum % 2 == 0) {
+        rectX += 5
+        if (rectX > 250) return
+        drawRect()
+      }
+      if (frameNum > 1000) {
+        frameNum = 0
+      }
+      requestAnimationFrame(animation)
+    }
+    animation()
   }
 })

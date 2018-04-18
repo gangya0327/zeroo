@@ -1,2 +1,1 @@
-<!--pages/canvas/canvas.wxml-->
-<text>pages/canvas/canvas.wxml</text>
+<canvas canvas-id="canvasTest" class="canvasTest" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></canvas>

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/snake/snake",
     "pages/router/router",
     "pages/canvas/canvas",
     "pages/media/media",
@@ -40,6 +41,12 @@
         "text": "路标",
         "iconPath": "image/icon/router.png",
         "selectedIconPath": "image/icon/routerl.png"
+      },
+      {
+        "pagePath": "pages/snake/snake",
+        "text": "贪吃蛇",
+        "iconPath": "image/icon/snake.png",
+        "selectedIconPath": "image/icon/snakel.png"
       }
     ],
     "color": "#777",
