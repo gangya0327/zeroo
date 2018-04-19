@@ -1,1 +1,49 @@
-/* pages/movieInfo/movieInfo.wxss */
+page {
+  font-family: "Microsoft YaHei";
+  background-color: #fff;
+}
+
+.meta {
+  padding: 20rpx 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meta .poster {
+  width: 500rpx;
+  height: 500rpx;
+}
+
+.meta .title {
+  font-weight: 700;
+  margin: 20rpx 0;
+}
+
+.meta .info {
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+  color: #aaa;
+  align-self:left;
+}
+
+.meta .info > text {
+  margin: 8rpx;
+}
+
+.meta .summary {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+
+.meta .summary .sum-title {
+  font-weight: 700;
+}
+
+.meta .summary .content {
+  font-size: 26rpx;
+  margin: 20rpx 0;
+  line-height: 38rpx;
+}
