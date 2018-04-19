@@ -1,1 +1,1 @@
-/* pages/movieSearch/movieSearch.wxss */
+@import '../movie/movie';

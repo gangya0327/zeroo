@@ -1,4 +1,7 @@
-<!--pages/router/router.wxml-->
+<button bindtap='downloadImg'>下载图片</button>
+<button bindtap='uploadImg'>上传图片</button>
+<image src='{{imgSrc}}' mode='aspectFit'></image>
+
 <button bindtap='tomessage' type='primary'>前往message信息页面</button>
 <button bindtap='tomodule' type='warn'>前往module模块页面</button>
 <button bindtap='toform'>前往form表单页面</button>

@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/router/router",
+    
+    "pages/movieSearch/movieSearch",
     "pages/movie/movie",
     "pages/movieInfo/movieInfo",
-    "pages/movieSearch/movieSearch",
     
     "pages/snake/snake",
     "pages/animate/animate",
-    "pages/router/router",
     "pages/canvas/canvas",
     "pages/media/media",
     "pages/operate/operate",

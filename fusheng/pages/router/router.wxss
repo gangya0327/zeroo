@@ -1,4 +1,15 @@
 /* pages/router/router.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+}
+
 button {
   margin: 30rpx 40rpx;
+}
+
+image {
+  width: 600rpx;
+  align-self: center;
 }
