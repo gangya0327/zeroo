@@ -13,3 +13,7 @@ image {
   width: 600rpx;
   align-self: center;
 }
+
+text {
+  text-align: center;
+}
