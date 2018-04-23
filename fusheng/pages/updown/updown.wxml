@@ -1,0 +1,4 @@
+<button bindtap='downloadImg'>下载图片</button>
+<button bindtap='uploadImg'>上传图片</button>
+<image src='{{imgSrc}}' mode='aspectFit'></image>
+<text>图片信息: {{res}}</text>

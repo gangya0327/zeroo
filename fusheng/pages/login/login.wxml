@@ -1,0 +1,5 @@
+<button bindtap='login'>登录</button>
+<view>{{info}}</view>
+<view wx:for='{{res}}' wx:key='this'>
+  {{index}}: {{item}}
+</view>

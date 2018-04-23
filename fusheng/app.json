@@ -1,6 +1,10 @@
 {
   "pages": [
+    "pages/contact/contact",    
     "pages/router/router",
+
+    "pages/updown/updown",
+    "pages/login/login",
     
     "pages/movieSearch/movieSearch",
     "pages/movie/movie",

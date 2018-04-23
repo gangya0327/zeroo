@@ -1,7 +1,3 @@
-<button bindtap='downloadImg'>下载图片</button>
-<button bindtap='uploadImg'>上传图片</button>
-<image src='{{imgSrc}}' mode='aspectFit'></image>
-
 <button bindtap='tomessage' type='primary'>前往message信息页面</button>
 <button bindtap='tomodule' type='warn'>前往module模块页面</button>
 <button bindtap='toform'>前往form表单页面</button>
@@ -9,3 +5,5 @@
 <button bindtap='tomedia' type='warn'>前往media媒体页面</button>
 <button bindtap='tocanvas'>前往canvas画布页面</button>
 <button bindtap='tosnake' type="primary">前往snake贪吃蛇页面</button>
+<button bindtap='toupdown' type='warn'>前往updown上传下载页面</button>
+<button bindtap='tologin'>前往login登录页面</button>
