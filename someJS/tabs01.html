@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tab切换</title>
+  <style>
+    .panel {
+      border: 1px solid;
+      padding: 20px;
+      width: 500px;
+      margin: 100px auto;
+    }
+
+    .tabList {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .tabList .tab {
+      border: 1px solid;
+      width: 100%;
+      text-align: center;
+      margin: 10px;
+      padding: 5px;
+    }
+    .tabList .tab.active {
+      background: red;
+    }
+
+    .tabList .tab:hover {
+      background: #ccc;
+      cursor: pointer;
+    }
+
+    .contentList {
+      border: 1px solid;
+      display: block;
+      height: 100px;
+      position: relative;
+    }
+
+    .contentList .content {
+      height: 100px;
+      position: absolute;
+      width: 100%;
+      display: none;
+    }
+    .contentList .content.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="panel">
+    <div class="tabList">
+      <div class="tab active">tab1</div>
+      <div class="tab">tab2</div>
+      <div class="tab">tab3</div>
+    </div>
+    <div class="contentList">
+      <div class="content active">conte nt1co ntent1content1 conten t1co ntent1co ntent1co ntent1conte nt1cont ent1</div>
+      <div class="content">con teco nten t2con tent 2c onten t2cont ent 2c o ntent2cont ent2cont ent2 co nten t2con t en t2c onte nt2co nten t2nt2</div>
+      <div class="content">content3</div>
+    </div>
+  </div>
+
+  <script>
+    var tabs = document.querySelectorAll('.tabList>.tab');
+    var cons = document.querySelectorAll('.contentList>.content');
+    
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        tabs.forEach(function(node){
+          node.classList.remove('active')
+        })
+        this.classList.add('active')
+
+        var index = [].indexOf.call(tabs, this);
+        cons.forEach(function(node){
+          node.classList.remove('active')
+        })
+        cons[index].classList.add('active')
+      })
+    })
+  </script>
+</body>
+
+</html>

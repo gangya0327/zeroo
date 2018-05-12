@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .modal-dialog {
+      display: none;  
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;    
+    }
+    .modal-dialog.open {
+      display: block;
+    }
+    .modal-dialog .cover {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #000;
+      opacity: 0.4;
+      z-index: 98;
+    }
+    .modal-dialog .modal-panel {
+      z-index: 99;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      background: #fff; 
+      width: 400px;
+      border: 1px solid;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+    }
+
+    .modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .modal-head span {
+      font-weight: 700;
+    }
+
+    .modal-head a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .modal-body {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .modal-foot {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .modal-foot .btn {
+      margin: 7px 10px 7px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <button id='openBtn'>Modal</button>
+
+  <div class="modal-dialog" id='modal'>
+    <div class="cover"></div>
+    <div class="modal-panel">
+      <div class="modal-head">
+        <span>标题</span>
+        <a href="#" id='closeBtn'>x</a>
+      </div>
+      <div class="modal-body">
+        <p>内容</p>
+        <p>内容</p>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-confirm">确定</button>
+        <button class="btn btn-cancel">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var open = document.querySelector('#openBtn');
+    var close = document.querySelector('#closeBtn');
+    var modal = document.querySelector('#modal');
+    var modalPanel = document.querySelector('#modal .modal-panel');
+
+    open.addEventListener('click', function () {
+      modal.classList.add('open');
+    })
+    close.addEventListener('click', function () {
+      modal.classList.remove('open');
+    })
+    modal.addEventListener('click', function () {
+      modal.classList.remove('open');
+    })
+    modalPanel.addEventListener('click', function (e) {
+      e.stopPropagation();      
+    })
+  </script>
+</body>
+
+</html>
